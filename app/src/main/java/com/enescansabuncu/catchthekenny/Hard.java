@@ -21,7 +21,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import java.util.Random;
 
-public class MainActivity extends AppCompatActivity {
+public class Hard extends AppCompatActivity {
     SharedPreferences sharedPreferences;
     int hightScore;
     TextView timeText;
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
                         image.setVisibility(View.INVISIBLE);
 
                     }
-                    AlertDialog.Builder alert=new AlertDialog.Builder(MainActivity.this);
+                    AlertDialog.Builder alert=new AlertDialog.Builder(Hard.this);
                     alert.setTitle("Restart?");
                     alert.setMessage("Are you  sure restart");
                     alert.setPositiveButton("yes", new DialogInterface.OnClickListener() {
@@ -96,8 +96,8 @@ public class MainActivity extends AppCompatActivity {
                     alert.setNegativeButton("no", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            Toast.makeText(MainActivity.this,"game over",Toast.LENGTH_SHORT);
-                            Intent intent=new Intent(MainActivity.this,GameLevel.class);
+                            Toast.makeText(Hard.this,"game over",Toast.LENGTH_SHORT);
+                            Intent intent=new Intent(Hard.this,GameLevel.class);
                             startActivity(intent);
                             finish();
                         }
@@ -136,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
                 Random random=new Random();
                 int i = random.nextInt(9);
                 imageArray[i].setVisibility(View.VISIBLE);
-                handler.postDelayed(this,800);
+                handler.postDelayed(this,200);
             }
         };
         handler.post(runnable);

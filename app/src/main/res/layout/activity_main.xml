@@ -102,14 +102,15 @@
         android:id="@+id/timeText"
         android:layout_width="100dp"
         android:layout_height="80dp"
+        android:layout_marginEnd="5dp"
         android:gravity="center"
-        android:text="Time:10"
-        android:textSize="28sp"
+        android:text="Time:20"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.948"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="0dp" />
+        tools:layout_editor_absoluteY="5dp" />
 
     <TextView
         android:id="@+id/scoreText"
